@@ -15,5 +15,11 @@
     "parcel": "^2.14.0",
     "posthtml-include": "^2.0.1",
     "rimraf": "^5.0.10"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "lodash-es": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "uuid": "^13.0.0"
   }
 }
