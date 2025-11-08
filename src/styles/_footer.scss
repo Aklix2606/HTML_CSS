@@ -1,0 +1,24 @@
+@use "variables";
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+
+footer {
+  background-color: variables.$component-background-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 17px;
+  color: variables.$component-txt-color;
+
+  a {
+    color: variables.$component-txt-color;
+    text-decoration: none;
+    &:hover {
+      color: variables.$component-txt-hover;
+    }
+  }
+}
+
