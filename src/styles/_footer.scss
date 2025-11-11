@@ -4,22 +4,40 @@
 
 
 footer {
+  position: sticky;
   background-color: variables.$component-background-color;
-  position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  height: variables.$component-height;
-  text-align: center;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 17px;
-  color: variables.$component-txt-color;
+  z-index: 9999;
 
-  a {
-    color: variables.$component-txt-color;
-    text-decoration: none;
-    &:hover {
-      color: variables.$component-txt-hover;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+
+
+    li {
+      display: block;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+
+      a {
+        color: variables.$component-txt-color;
+        text-decoration: none;
+        padding: 14px;
+
+        &:hover {
+          color: variables.$component-txt-hover;
+        }
+      }
     }
+  }
+  
+
+
+  main {
+    padding-top: 64px;
   }
 }
 
