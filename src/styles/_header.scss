@@ -2,12 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 
-
 nav {
+  position: sticky;
   background-color: variables.$component-background-color;
-  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9999;
 
   ul {
     text-align: center;
