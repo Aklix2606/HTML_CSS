@@ -1,0 +1,533 @@
+.article {
+  position: relative;
+  top: 1em;
+  display: block;
+  width: 90%;
+  max-width: 75em;
+  height: 90%;
+  min-height: 500px;
+  margin: 0 auto 2em auto;
+  background: #fff;
+  /* For old browsers */
+  border: 1px solid #eee;
+
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 50px rgba(0, 0, 0, .5);
+  -o-box-shadow: 0px 0px 50px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, .5);
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0)
+}
+
+.aside {
+  position: relative;
+  float: left;
+  width: 30%;
+  min-width: 150px;
+  height: 100%;
+  background-color: #fff
+}
+
+/* Do not allow image dragging */
+.aside .mask {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  top: -2.5%;
+  left: -2.5%;
+  width: 105%;
+  height: 105%;
+  background: transparent
+}
+
+.aside img {
+  display: block;
+  position: absolute;
+  z-index: 0;
+
+  min-width: 150px;
+  height: 100%
+}
+
+.aside .overlay {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: -2.5%;
+  left: -10%;
+  width: 120%;
+  height: 110%
+}
+
+.aside .overlay img {
+  display: none
+}
+
+.section {
+  overflow: hidden;
+  /* Simple support for IE6-7: images gallery are shown verticaly but all keeps accessible and fonctional */
+  overflow-y: auto;
+
+  position: relative;
+  float: left;
+  width: 70%;
+  max-width: 51em;
+  height: 100%;
+  padding: 2% 5% 0;
+  padding: 0;
+  background: #fff
+}
+
+/*! Note: @supports query isn't a cross browsers solution */
+@supports (display:-webkit-box) or (display:box) or (display:-moz-flex) or (display:-ms-flex) or (display:-webkit-flex) or (display: flex) {
+
+  .article {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-grow: 1;
+    box-shadow: none
+  }
+
+  .aside .overlay {
+    overflow: hidden;
+    content: ' ';
+
+    position: absolute;
+    top: -2.5%;
+    left: -2.5%;
+
+    height: 105%;
+    width: 105%;
+
+    background-size: cover;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    /* FF doesn't support blur filter, but SVG */
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='svgBlur' x='-5%' y='-5%' width='110%' height='110%'><feGaussianBlur in='SourceGraphic' stdDeviation='5'/></filter></svg>#svgBlur");
+    filter: 'progid: DXImageTransform.Microsoft.Blur(PixelRadius=20)';
+    filter: blur(20px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden
+  }
+
+  .aside .overlay img {
+    display: block;
+    width: 105%;
+    min-width: auto;
+    height: 105%
+  }
+
+  .section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+
+    box-shadow: 15px 25px 25px -5px rgba(0, 0, 0, .15), 13px -15px 25px 0px rgba(0, 0, 0, .15)
+  }
+
+  .aside img {
+    position: static;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000
+  }
+
+}
+
+.section .half-top {
+  clear: both
+}
+
+h1,
+h2,
+h3 {
+  font-family: Montserrat, sans-serif
+}
+
+h1 {
+  margin: 2vh 0 2vw 0;
+  padding-left: 7%;
+  font-size: 6vh;
+  font-size: calc(7.96996px + 3.00375vw);
+  line-height: calc(9.95744px + 4.25532vw)
+}
+
+h2 {
+  margin: 0 0 1vw 0;
+  font-size: 2vw;
+  font-style: italic;
+  font-weight: 400
+}
+
+/* Scale calculation for small screen: we need better maths here */
+:root {
+  --scale: calc(-750px * 1.36);
+}
+
+@-webkit-keyframes move {
+
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0px, 0, 0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(-620px, 0, 0);
+    transform: translate3d(-620px, 0, 0)
+  }
+
+}
+
+@keyframes move {
+
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+
+  100% {
+    -webkit-transform: translate3d(-620px, 0, 0);
+    transform: translate3d(-620px, 0, 0)
+  }
+
+}
+
+@media only screen and (max-width: 720px) {
+
+  @keyframes move {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(var(--scale, 1250px), 0, 0);
+    }
+  }
+
+}
+
+.teaser-outer {
+  position: relative;
+  display: block;
+  overflow-x: visible;
+  overflow-x: auto;
+  /* No width here! */
+  height: auto;
+  min-height: 200px;
+  margin: 0 7%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Desable the user's mouse selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.teaser ul {
+  display: inline-table;
+  height: 30%;
+  margin: 0;
+  padding: 0
+}
+
+.teaser li {
+  position: relative;
+  display: table-cell;
+  height: 30%
+}
+
+.teaser a {
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: inherit;
+  border: 3px solid transparent;
+  -webkit-animation: border 300ms linear;
+  -moz-animation: border 300ms linear;
+  -o-animation: border 300ms linear;
+  animation: border 300ms linear
+}
+
+.teaser a:hover {
+  border-color: #84b7f6
+}
+
+.teaser figure {
+  position: relative;
+  z-index: 20;
+  float: left;
+  overflow: hidden;
+  width: 250px;
+  min-width: 250px;
+  height: 9.3em;
+  margin: 0;
+  padding: 3px 10px 3px
+}
+
+.teaser li:last-child figure {
+  padding-right: 0
+}
+
+.teaser img {
+  display: block;
+  display: flex;
+  width: 220px;
+  height: 180px;
+  height: auto;
+  /* Images fit their container location */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* The images keep the containers space */
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+
+.teaser figcaption {
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  font-size: 20px;
+  color: #000;
+  mix-blend-mode: screen
+}
+
+.teaser figcaption h3 {
+  width: 100%;
+  margin: 0;
+  padding: 3px 5px
+}
+
+.section .half-bottom {
+  overflow-y: visible;
+  overflow-y: auto;
+  float: left;
+  clear: both;
+  flex: 1 0 auto;
+  margin: 0 7%;
+  padding: 0;
+  height: auto;
+  min-height: 200px;
+  /* Fallback for vertical scroll */
+  max-height: 47%;
+  /* Absolute calculation */
+  max-height: calc(100% - 200px - 3em - calc(9.95744px + 4.25532vw))
+}
+
+/* Note: @supports query isn't read by all browsers unfortunatly: this list is out of the scope */
+@supports (display:-webkit-box) or (display:box) or (display:-moz-flex) or (display:-ms-flex) or (display:-webkit-flex) or (display: flex) {
+
+  .section .half-top {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    height: auto
+  }
+
+  .teaser-outer {
+    overflow: hidden
+  }
+
+  .teaser {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+
+    min-height: 1px;
+
+    animation: move 10s alternate-reverse infinite;
+  }
+
+  .teaser ul {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+  }
+
+  .teaser-outer:hover {
+    overflow-x: visible;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-destination: 50% 50%
+  }
+
+  .teaser-outer:hover .teaser {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused
+  }
+
+  .teaser-outer:hover ul,
+  .teaser-outer:focus-within ul {
+    position: absolute;
+    /* Correction due to translate3d: needs a review */
+    top: -1.065em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden
+  }
+
+  .section .half-bottom {
+    flex: 1 0 auto;
+    margin: auto auto;
+    padding: 0 5% 0 7%;
+    scroll-behavior: smooth
+  }
+
+}
+
+.half-bottom ::-webkit-scrollbar-button {
+  background-color: #666
+}
+
+.half-bottom ::-webkit-scrollbar-track {
+  background-color: #999
+}
+
+.half-bottom ::-webkit-scrollbar-track-piece {
+  background-color: #fff
+}
+
+.half-bottom ::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  border-radius: 3px
+}
+
+@media only screen and (max-width: 450px) {
+
+  .aside {
+    display: none
+  }
+
+  .section {
+    width: 100%
+  }
+
+  /* Show scroll bar by default */
+  .teaser-outer {
+    overflow-x: visible;
+    overflow-y: auto
+  }
+
+  /* Stop animation on user's event */
+  .teaser-outer:hover .teaser {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused
+  }
+
+  .teaser-outer:hover ul,
+  .teaser-outer:focus-within ul {
+    position: absolute;
+    /* Correction due to translate3d: needs a review */
+    top: -1.1em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden
+  }
+
+}
+
+/**
+ * Styling the scroll bars for webkit browsers engine
+ */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px
+}
+
+::-webkit-scrollbar-button {
+  background-color: #666
+}
+
+::-webkit-scrollbar-track {
+  background-color: #999
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  border-radius: 12px
+}
+
+.teaser ::-webkit-scrollbar-corner {
+  background-color: #999
+}
+
+.teaser ::-webkit-resizer {
+  background-color: #666
+}

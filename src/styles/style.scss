@@ -1,13 +1,18 @@
 @use "variables";
 @use "header";
 @use "footer";
+@use "article";
 
 html, body {
   height: 100%;
   margin: 0;
+  font-size: 16px;
+  line-height: 1.5
 }
 
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -15,8 +20,51 @@ body {
 
 main {
   flex: 1 0 auto;
+  padding-bottom: variables.$component-height;
+}
+
+#main-content {
+  min-height: 100vh;
+  padding: 15px;
+  background-image:
+    url("../assets/images/demon.jpg"),
+    url("../assets/images/barcelona.jpg"),
+    url("../assets/images/rushmore.jpg"),
+    url("../assets/images/mexico.jpg");
+
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: right top, left top, right bottom, left bottom;
+  background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  background-attachment: scroll;
 }
 
 footer {
   flex-shrink: 0;
 }
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+@media (max-width: 600px) {
+  #main-content {
+    background-image:
+      url("../assets/images/demon.jpg"),
+      url("../assets/images/japan.jpg"),
+      url("../assets/images/rushmore.jpg"),
+      url("../assets/images/mexico.jpg");
+
+    background-position:
+      center center,
+      center center,
+      right bottom,
+      left bottom;
+
+    background-size:
+      cover,
+      cover,
+      30% auto,
+      30% auto;
+  }
+}
+
