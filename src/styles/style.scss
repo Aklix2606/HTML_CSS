@@ -38,6 +38,34 @@ main {
   background-attachment: scroll;
 }
 
+#cat-content {
+  position: relative;
+  min-height: 200vh;
+}
+
+#japan,
+#finland {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#japan {
+  top: 0;
+  height: 100vh;
+  background-image: url("../assets/images/cat_japan.jpg");
+}
+
+#finland {
+  top: 100vh;
+  height: 100vh;
+  background-image: url("../assets/images/cat_finland.jpg");
+}
+
 footer {
   flex-shrink: 0;
 }
