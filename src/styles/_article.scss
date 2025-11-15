@@ -167,8 +167,12 @@ h2 {
   max-height: 47%;
   /* Absolute calculation */
   max-height: calc(100% - 200px - 3em - calc(9.95744px + 4.25532vw))
+
 }
 
+.half-bottom img {
+  width: 100%;
+}
 /* Note: @supports query isn't read by all browsers unfortunatly: this list is out of the scope */
 @supports (display:-webkit-box) or (display:box) or (display:-moz-flex) or (display:-ms-flex) or (display:-webkit-flex) or (display: flex) {
 
@@ -219,6 +223,8 @@ h2 {
     min-height: 1px;
 
     animation: move 10s alternate-reverse infinite;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
   }
 
 
@@ -227,6 +233,9 @@ h2 {
     margin: auto auto;
     padding: 0 5% 0 7%;
     scroll-behavior: smooth
+
+    
+
   }
 
 }
