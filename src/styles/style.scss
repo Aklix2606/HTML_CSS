@@ -2,6 +2,7 @@
 @use "header";
 @use "footer";
 @use "article";
+@use "recipe-card";
 
 html, body {
   height: 100%;
@@ -20,7 +21,7 @@ body {
 
 main {
   flex: 1 0 auto;
-  padding-bottom: variables.$component-height;
+  padding-bottom: 0;
 }
 
 #main-content {
@@ -41,6 +42,16 @@ main {
 #cat-content {
   position: relative;
   min-height: 200vh;
+}
+
+#det-content {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  padding: 2rem 1.5rem;
+  background-image: url("../assets/images/cocina.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #japan,
@@ -96,3 +107,9 @@ img {
   }
 }
 
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}

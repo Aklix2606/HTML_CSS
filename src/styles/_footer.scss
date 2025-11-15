@@ -4,11 +4,10 @@
 
 
 footer {
-  position: sticky;
   background-color: variables.$component-background-color;
-  top: 0;
   width: 100%;
   z-index: 9999;
+  margin-top: auto;
 
   ul {
     text-align: center;
