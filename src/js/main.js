@@ -1,19 +1,12 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { debounce, round } from "lodash-es";
 
-AOS.init();
-
-const servingsInput = document.getElementById('servings-input');
-const qtySpans = document.querySelectorAll('.qty');
-
-function updateQuantities() {
-  const target = Number(servingsInput.value) || 4;
-  qtySpans.forEach(span => {
-    const base = Number(span.dataset.base);
-    const newValue = base * target / 4;
-    span.textContent = newValue;
+const handleInput = debounce(() => {
+  const people = Number(input.value);
+  document.querySelectorAll("[data-base]").forEach((el) => {
+    const base = Number(el.dataset.base);
+    el.textContent = round(base * (people / 4), 2);
   });
-}
+}, 300);
 
-servingsInput.addEventListener('input', updateQuantities);
-updateQuantities();
+input.addEventListener("input", handleInput);
+
