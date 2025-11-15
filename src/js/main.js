@@ -1,12 +1,16 @@
-import { debounce, round } from "lodash-es";
+import { round } from "lodash-es";
 
-const handleInput = debounce(() => {
-  const people = Number(input.value);
-  document.querySelectorAll("[data-base]").forEach((el) => {
-    const base = Number(el.dataset.base);
-    el.textContent = round(base * (people / 4), 2);
+const servingsInput = document.getElementById('servings-input');
+const qtySpans = document.querySelectorAll('.qty');
+
+function updateQuantities() {
+  const target = Number(servingsInput.value) || 4;
+  qtySpans.forEach(span => {
+    const base = Number(span.dataset.base);
+    const newValue = round(base * target / 4);
+    span.textContent = newValue;
   });
-}, 300);
+}
 
-input.addEventListener("input", handleInput);
-
+servingsInput.addEventListener('input', updateQuantities);
+updateQuantities();
