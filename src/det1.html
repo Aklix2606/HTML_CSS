@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabronatuas - det1</title>
+  <link rel="stylesheet" href="styles/style.scss">
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <include src="src/components/header.html"></include>
+  <main>
+    <section id="det-content">
+      <article class="recipe-card">
+        <header class="recipe-card__header">
+          <h1 class="recipe-card__title">Ramen de panceta y pollo</h1>
+          <p class="recipe-card__subtitle">
+            Caldo de pollo y panceta en olla exprés, panceta marinada, huevos ajitsuke y fideos de ramen.
+          </p>
+          <img src="./assets/images/ramen.jpg">
+          <ul class="recipe-card__meta">
+            <li class="recipe-card__meta-item">
+              ⏱ Tiempo total: 3 h (20–30 min elaboración, 30–35 min cocción, 2 h reposo)
+            </li>
+            <li class="recipe-card__meta-item">
+              <label for="servings-input" class="sr-only">🍽 Número de comensales: </label>
+              <input id="servings-input" type="number" min="2" value="4" step="1">
+            </li>
+          </ul>
+        </header>
+    
+        <section class="recipe-card__body">
+          <h2 class="recipe-card__section-title">Ingredientes (para <span class="qty" data-key="personas"
+              data-base="4">4</span> personas)</h2>
+    
+          <h3>Base del ramen</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Carcasa de pollo blanco –
+              <span class="qty" data-key="carcasa-pollo" data-base="1">1</span>
+              pieza
+            </li>
+            <li>
+              Panceta de cerdo entera –
+              <span class="qty" data-key="panceta" data-base="1">1</span>
+              pieza (≈300 g)
+            </li>
+            <li>
+              Cebolla verde (negi) o cebolleta fresca –
+              <span class="qty" data-key="cebolleta" data-base="1">1</span>
+            </li>
+            <li>
+              Parte verde del puerro –
+              <span class="qty" data-key="puerro-verde" data-base="2">2</span>
+            </li>
+            <li>
+              Zanahoria –
+              <span class="qty" data-key="zanahoria" data-base="2">2</span>
+            </li>
+            <li>
+              Diente de ajo –
+              <span class="qty" data-key="ajo-total" data-base="6">6</span>
+              (de ellos
+              <span class="qty" data-key="ajo-caldo" data-base="2">2</span>
+              para el caldo y
+              <span class="qty" data-key="ajo-huevos" data-base="4">4</span>
+              para los huevos)
+            </li>
+            <li>
+              Jengibre fresco –
+              <span class="qty" data-key="jengibre-total" data-base="6">6</span>
+              rodajas (de ellas
+              <span class="qty" data-key="jengibre-caldo" data-base="3">3</span>
+              para el caldo y
+              <span class="qty" data-key="jengibre-huevos" data-base="3">3</span>
+              para los huevos)
+            </li>
+            <li>
+              Setas shiitake frescas –
+              <span class="qty" data-key="shiitake" data-base="4">4</span>
+            </li>
+            <li>
+              Huevos –
+              <span class="qty" data-key="huevos" data-base="4">4</span>
+            </li>
+            <li>
+              Salsa de soja –
+              <span class="qty" data-key="soja" data-base="200">200</span>
+              ml
+            </li>
+            <li>
+              Mirin –
+              <span class="qty" data-key="mirin" data-base="60">60</span>
+              ml
+            </li>
+            <li>
+              Azúcar moreno –
+              <span class="qty" data-key="azucar" data-base="25">25</span>
+              g
+            </li>
+            <li>
+              Fideos para ramen –
+              <span class="qty" data-key="fideos" data-base="250">250</span>
+              g
+            </li>
+            <li>
+              Cebollino (opcional)
+            </li>
+            <li>
+              Alga nori (opcional) –
+              <span class="qty" data-key="nori" data-base="1">1</span>
+              lámina
+            </li>
+            <li>
+              Aceite –
+              <span class="qty" data-key="aceite" data-base="3">3</span>
+              cucharada(s)
+            </li>
+            <li>
+              Agua helada para cortar la cocción de los huevos
+            </li>
+          </ul>
+    
+          <h3>Otros</h3>
+          <ul class="recipe-card__ingredients">
+            <li>Hilo de cocina (≈50 cm por cada panceta)</li>
+            <li>
+              Olla exprés
+            </li>
+            <li>
+              Cacito
+            </li>
+            <li>
+              Cazo
+            </li>
+            <li>
+              Pinzas
+            </li>
+            <li>
+              Cuchara
+            </li>
+          </ul>
+    
+          <h2 class="recipe-card__section-title">Elaboración</h2>
+          <ol class="recipe-card__steps">
+            <li>
+              Atamos la
+              <span class="qty" data-key="panceta" data-base="1">1</span>
+              panceta (o cada panceta) con hilo de cocina, juntando un extremo con otro.
+              La piel debe quedar por fuera.
+              Calentamos
+              <span class="qty" data-key="aceite" data-base="3">3</span>
+              cucharada(s) de aceite en la olla, marcamos la panceta por todos los lados
+              hasta que esté dorada y reservamos. Desechamos el aceite de la olla en un
+              recipiente apto una vez acabemos.
+            </li>
+            <img src="./assets/images/panceta.jpg" alt="Pieza entera de panceta atada con hilo">
+            <li>
+              Pelamos y lavamos las verduras:
+              <span class="qty" data-key="cebolleta" data-base="1">1</span>
+              cebolla(s),
+              <span class="qty" data-key="puerro-verde" data-base="2">2</span>
+              parte(s) verde(s) de puerro,
+              <span class="qty" data-key="zanahoria" data-base="2">2</span>
+              zanahoria(s) y
+              <span class="qty" data-key="ajo-caldo" data-base="2">2</span>
+              diente(s) de ajo. Añadimos las verduras a la(s) olla(s).
+            </li>
+            <img src="./assets/images/verduras.jpg" alt="cebolla, dientes de ajo y puerro cortados y lavados">
+            <li>
+              Limpiamos bien la tierra de
+              <span class="qty" data-key="shiitake" data-base="4">4</span>
+              seta(s) shiitake y las secamos. Cortamos
+              <span class="qty" data-key="jengibre-caldo" data-base="3">3</span>
+              rodaja(s) de jengibre y añadimos todo a la(s) olla(s).
+            </li>
+            <li>
+              Añadimos
+              <span class="qty" data-key="carcasa-pollo" data-base="1">1</span>
+              pieza(s) de pollo y la panceta a la(s) olla(s). Llenamos la(s) olla(s) de
+              agua hasta que cubra todos los ingredientes, la cerramos y llevamos a ebullición
+              (máxima potencia en vitro/fogón). Usaremos el modo de presión alta de la(s) olla(s)
+              exprés, posición 2. Una vez empiece a salir vapor, ponemos un contador de 15 minutos.
+              Cuando acabe, apagamos el fuego y dejamos que la presión de la olla baje antes de abrirla.
+            </li>
+            <img src="./assets/images/olla.jpg" alt="Olla exprés con verduras">
+            <li>
+              Retiramos la panceta y
+              <span class="qty" data-key="shiitake" data-base="4">4</span>
+              seta(s); serán el acompañamiento del ramen. Colamos el caldo y desechamos el resto
+              de alimentos.
+            </li>
+            <li>
+              Llenamos un cacito con agua y llevamos a ebullición (máxima potencia en vitro/fogón).
+              Con una cuchara introducimos con cuidado
+              <span class="qty" data-key="huevos" data-base="4">4</span>
+              huevo(s) y dejamos que se cuezan 6 minutos. Una vez pasado ese tiempo, cortamos
+              la cocción de los huevos introduciéndolos en el agua helada y los pelamos.
+            </li>
+            <li>
+              Calentamos en un cazo
+              <span class="qty" data-key="ajo-huevos" data-base="4">4</span>
+              diente(s) de ajo,
+              <span class="qty" data-key="jengibre-huevos" data-base="3">3</span>
+              rodaja(s) de jengibre,
+              <span class="qty" data-key="soja" data-base="200">200</span>
+              ml de salsa de soja,
+              <span class="qty" data-key="mirin" data-base="60">60</span>
+              ml de mirin y
+              <span class="qty" data-key="azucar" data-base="25">25</span>
+              g de azúcar moreno. Una vez hiervan, retiramos del fuego y sumergimos
+              <span class="qty" data-key="huevos" data-base="4">4</span>
+              huevo(s) pelado(s) y la panceta hecha previamente. Marinamos durante 2 horas,
+              volteando los ingredientes cada 30 minutos para que absorban bien la salsa.
+            </li>
+            <li>
+              Finalmente, cocemos los fideos siguiendo las instrucciones indicadas en el paquete.
+            </li>
+            <li>
+              Para montar el plato, quitamos el hilo de la panceta y cortamos en lonchas finas.
+              Cortamos el/los huevo(s) por la mitad, picamos el cebollino, laminamos las setas y
+              troceamos
+              <span class="qty" data-key="nori" data-base="1">1</span>
+              lámina(s) de alga nori.
+            </li>
+            <li>
+              Para servir: ponemos 4 cucharadas de marinado, una ración de caldo, una ración de
+              fideos, dos mitades de huevo y la panceta cortada en cada bol.
+            </li>
+            <li>
+              Listo! Tendremos un ramen japonés riquisimo para comer. Para conocer mas sobre este plato y su gran historia,
+              consultad el siguiente video:
+            </li>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8SeHNPw9sA8?si=AubtNiFsuDwJorky"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ol>
+        </section>
+      </article>
+    </section>
+  </main>
+  <include src="src/components/footer.html"></include>
+</body>
+
+</html>

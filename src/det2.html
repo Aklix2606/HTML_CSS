@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabronautas - det2</title>
+  <link rel="stylesheet" href="styles/style.scss">
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <include src="src/components/header.html"></include>
+  <main>
+    <section id="det-content">
+      <article class="recipe-card">
+        <header class="recipe-card__header">
+          <h1 class="recipe-card__title">Tronco de Navidad</h1>
+          <p class="recipe-card__subtitle">
+            Bizcocho de vainilla y canela relleno de mousse de caramelo salado, cubierto con crema de mantequilla
+            especiada y decorado con piñas de galleta, setas de merengue y frutas rojas.
+          </p>
+          <img src="./assets/images/tronco-navidad.jpg" alt="Tronco de Navidad">
+          <ul class="recipe-card__meta">
+            <li class="recipe-card__meta-item">
+              ⏱ Tiempo total: 4 h aprox. (repartidas en varias elaboraciones y reposos)
+            </li>
+            <li class="recipe-card__meta-item">
+              <label for="servings-input" class="sr-only">🍽 Número de comensales</label>
+              <input id="servings-input" type="number" min="2" value="4" step="1">
+            </li>
+          </ul>
+        </header>
+
+        <section class="recipe-card__body">
+          <h2 class="recipe-card__section-title">
+            Ingredientes (para <span class="qty" data-key="personas" data-base="4">4</span> personas)
+          </h2>
+
+          <h3>Bizcocho de vainilla y canela</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Huevos (tamaño L) –
+              <span class="qty" data-key="huevos-bizcocho" data-base="4">4</span>
+              unidad(es)
+            </li>
+            <li>
+              Azúcar blanca –
+              <span class="qty" data-key="azucar-bizcocho" data-base="120">120</span>
+              g
+            </li>
+            <li>
+              Harina de trigo –
+              <span class="qty" data-key="harina-bizcocho" data-base="120">120</span>
+              g
+            </li>
+            <li>
+              Canela en polvo –
+              <span class="qty" data-key="canela-bizcocho" data-base="1">1</span>
+              cucharadita
+            </li>
+            <li>
+              Extracto de vainilla –
+              <span class="qty" data-key="vainilla-bizcocho" data-base="1">1</span>
+              cucharadita
+            </li>
+            <li>
+              Sal –
+              <span class="qty" data-key="sal-bizcocho" data-base="1">1</span>
+              pizca
+            </li>
+            <li>
+              Mantequilla sin sal (para engrasar la bandeja) –
+              <span class="qty" data-key="mantequilla-engrasa" data-base="10">10</span>
+              g
+            </li>
+          </ul>
+
+          <h3>Relleno de mousse de caramelo salado</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Azúcar blanca –
+              <span class="qty" data-key="azucar-caramelo" data-base="150">150</span>
+              g
+            </li>
+            <li>
+              Nata para montar (35% M.G.) –
+              <span class="qty" data-key="nata-caramelo" data-base="150">150</span>
+              ml para el caramelo +
+              <span class="qty" data-key="nata-mousse" data-base="200">200</span>
+              ml para la mousse
+            </li>
+            <li>
+              Mantequilla sin sal –
+              <span class="qty" data-key="mantequilla-caramelo" data-base="80">80</span>
+              g
+            </li>
+            <li>
+              Sal marina –
+              <span class="qty" data-key="sal-caramelo" data-base="0.5">0.5</span>
+              cucharadita
+            </li>
+            <li>
+              Gelatina en láminas –
+              <span class="qty" data-key="gelatina-laminas" data-base="3">3</span>
+              unidad(es)
+            </li>
+          </ul>
+
+          <h3>Piñas de galleta y Chocapic</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Galletas María de chocolate –
+              <span class="qty" data-key="galleta-choco" data-base="200">200</span>
+              g
+            </li>
+            <li>
+              Queso crema –
+              <span class="qty" data-key="queso-crema" data-base="180">180</span>
+              g
+            </li>
+            <li>
+              Extracto de vainilla –
+              <span class="qty" data-key="vainilla-pinas" data-base="1">1</span>
+              cucharadita
+            </li>
+            <li>
+              Cacao en polvo –
+              <span class="qty" data-key="cacao-pinas" data-base="10">10</span>
+              g (≈
+              <span class="qty" data-key="cacao-pinas-cdas" data-base="2">2</span>
+              cucharaditas)
+            </li>
+            <li>
+              Cereales tipo Chocapic o similares (cantidad suficiente para cubrir las piñas)
+            </li>
+          </ul>
+
+          <h3>Setas de merengue</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Claras de huevo –
+              <span class="qty" data-key="claras-merengue" data-base="2">2</span>
+              unidad(es)
+            </li>
+            <li>
+              Azúcar glas –
+              <span class="qty" data-key="azucar-glas-merengue" data-base="100">100</span>
+              g
+            </li>
+            <li>
+              Crema tártara (opcional, para estabilizar) –
+              <span class="qty" data-key="crema-tartara" data-base="0.25">0.25</span>
+              cucharadita
+            </li>
+            <li>
+              Cacao en polvo para espolvorear (opcional)
+            </li>
+          </ul>
+
+          <h3>Cobertura de crema de mantequilla especiada</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Mantequilla sin sal (a temperatura ambiente) –
+              <span class="qty" data-key="mantequilla-buttercream" data-base="250">250</span>
+              g
+            </li>
+            <li>
+              Azúcar glas –
+              <span class="qty" data-key="azucar-glas-buttercream" data-base="150">150</span>
+              g
+            </li>
+            <li>
+              Canela en polvo –
+              <span class="qty" data-key="canela-buttercream" data-base="0.5">0.5</span>
+              cucharadita
+            </li>
+            <li>
+              Extracto de vainilla –
+              <span class="qty" data-key="vainilla-buttercream" data-base="1">1</span>
+              cucharadita
+            </li>
+          </ul>
+
+          <h3>Montaje y decoración</h3>
+          <ul class="recipe-card__ingredients">
+            <li>
+              Grosellas, frambuesas o arándanos frescos –
+              <span class="qty" data-key="frutas-rojas" data-base="50">50</span>
+              g
+            </li>
+            <li>
+              Ramitas de romero fresco –
+              <span class="qty" data-key="romero" data-base="4">4</span>
+              unidad(es)
+            </li>
+            <li>
+              Coco rallado –
+              <span class="qty" data-key="coco-rallado" data-base="20">20</span>
+              g
+            </li>
+            <li>
+              Polvo dorado comestible – al gusto
+            </li>
+            <li>
+              Azúcar glas – cantidad suficiente para espolvorear como nieve
+            </li>
+            <li>
+              Chocolate (blanco, con leche o negro) – una pequeña cantidad para pegar las setas
+            </li>
+          </ul>
+
+          <h2 class="recipe-card__section-title">Elaboración</h2>
+
+          <h3>Bizcocho de vainilla y canela</h3>
+          <ol class="recipe-card__steps">
+            <li>
+              Prepara la bandeja de horno:
+              coloca papel de horno sobre una bandeja de 35 × 25 cm y engrásalo ligeramente con
+              <span class="qty" data-key="mantequilla-engrasa" data-base="10">10</span>
+              g de mantequilla derretida. Usa un pincel o un trozo de papel de cocina para repartir la mantequilla de
+              manera uniforme.
+            </li>
+            <li>
+              Precalienta el horno a 180 ºC (calor arriba y abajo, sin ventilador).
+            </li>
+            <li>
+              Prepara la mezcla de huevos y azúcar:
+              bate
+              <span class="qty" data-key="huevos-bizcocho" data-base="4">4</span>
+              huevo(s) entero(s) con
+              <span class="qty" data-key="azucar-bizcocho" data-base="120">120</span>
+              g de azúcar blanca a velocidad alta (4/5 en tu batidora) durante 8–10 minutos, hasta que tripliquen su
+              volumen y adquieran una textura esponjosa y color pálido.
+              No es necesario separar claras y yemas en esta receta.
+            </li>
+            <li>
+              Incorpora los ingredientes secos:
+              tamiza juntos
+              <span class="qty" data-key="harina-bizcocho" data-base="120">120</span>
+              g de harina de trigo,
+              <span class="qty" data-key="canela-bizcocho" data-base="1">1</span>
+              cucharadita de canela y
+              <span class="qty" data-key="sal-bizcocho" data-base="1">1</span>
+              pizca de sal. Añade esta mezcla en tres tandas sobre los huevos batidos, mezclando con una espátula de
+              silicona y movimientos envolventes para no perder el aire.
+              Agrega también
+              <span class="qty" data-key="vainilla-bizcocho" data-base="1">1</span>
+              cucharadita de extracto de vainilla.
+            </li>
+            <li>
+              Hornea:
+              vierte la masa en la bandeja preparada, extiéndela de forma uniforme y hornea durante 12–15 minutos, hasta
+              que esté ligeramente dorada, firme al tacto pero elástica.
+            </li>
+            <li>
+              Desmolda:
+              deja reposar el bizcocho
+              10 minutos fuera del horno. Coloca otra hoja de papel de horno encima, voltea el bizcocho y retira
+              cuidadosamente el papel inicial.
+              Vuelve a darle la vuelta sobre un paño de algodón limpio espolvoreado con azúcar glas para que no se pegue.
+              Opcionalmente, enróllalo mientras aún está tibio con ayuda del paño para darle forma y evitar que se rompa
+              después.
+            </li>
+          </ol>
+
+          <h3>Relleno de mousse de caramelo salado</h3>
+          <ol class="recipe-card__steps">
+            <li>
+              Prepara el caramelo:
+              derrite
+              <span class="qty" data-key="azucar-caramelo" data-base="150">150</span>
+              g de azúcar blanca en una sartén seca a temperatura media-alta hasta que tome un color ámbar.
+              Mientras tanto, calienta
+              <span class="qty" data-key="nata-caramelo" data-base="150">150</span>
+              ml de nata para montar en un cazo a baja temperatura hasta que esté tibia.
+              Retira el caramelo del fuego y añade la nata tibia poco a poco, removiendo constantemente. Incorpora
+              <span class="qty" data-key="mantequilla-caramelo" data-base="80">80</span>
+              g de mantequilla sin sal y
+              <span class="qty" data-key="sal-caramelo" data-base="0.5">0.5</span>
+              cucharadita de sal marina. Deja enfriar hasta unos 30–35 ºC.
+            </li>
+            <li>
+              Hidrata la gelatina:
+              pon en remojo
+              <span class="qty" data-key="gelatina-laminas" data-base="3">3</span>
+              lámina(s) de gelatina en agua fría durante 5 minutos, escúrrelas bien y disuélvelas en el caramelo tibio.
+            </li>
+            <li>
+              Monta la nata:
+              monta
+              <span class="qty" data-key="nata-mousse" data-base="200">200</span>
+              ml de nata para montar a punto firme. Incorpora el caramelo de forma gradual usando una espátula y
+              movimientos envolventes, sin batidora, para no perder aire.
+            </li>
+            <li>
+              Reposo:
+              refrigera la mousse de caramelo salado durante al menos 1 hora para que coja cuerpo antes de rellenar el
+              bizcocho.
+            </li>
+          </ol>
+
+          <h3>Piñas de galleta y Chocapic</h3>
+          <ol class="recipe-card__steps">
+            <li>
+              Prepara la masa:
+              tritura
+              <span class="qty" data-key="galleta-choco" data-base="200">200</span>
+              g de galletas María de chocolate y mézclalas con
+              <span class="qty" data-key="cacao-pinas" data-base="10">10</span>
+              g de cacao en polvo (≈
+              <span class="qty" data-key="cacao-pinas-cdas" data-base="2">2</span>
+              cucharaditas). Añade
+              <span class="qty" data-key="queso-crema" data-base="180">180</span>
+              g de queso crema frío y mezcla hasta obtener una textura homogénea.
+              Agrega
+              <span class="qty" data-key="vainilla-pinas" data-base="1">1</span>
+              cucharadita de extracto de vainilla y amasa hasta que la masa sea maleable.
+            </li>
+            <li>
+              Forma las piñas:
+              divide la masa en porciones de unos 80–100 g cada una y dales forma ligeramente puntiaguda, como pequeñas
+              piñas.
+              Si la masa está muy blanda, refrigera las piezas formadas durante unos 5 minutos antes de continuar.
+            </li>
+            <img src="./assets/images/piñas.jpg" alt="Masa de cacao en forma de cilindro con punta redondeada">
+            <li>
+              Inserta los Chocapic:
+              coloca los cereales Chocapic o similares en filas superpuestas sobre cada pieza de masa, simulando los
+              piñones de una piña.
+            </li>
+            <li>
+              Refrigera:
+              coloca las piñas en la nevera durante al menos 1 hora para que endurezcan y se integren bien los sabores.
+            </li>
+            <img src="./assets/images/piñas-final.jpg" alt="Piñas de chocolate">
+          </ol>
+
+          <h3>Setas de merengue</h3>
+          <ol class="recipe-card__steps">
+            <li>
+              Monta el merengue:
+              bate
+              <span class="qty" data-key="claras-merengue" data-base="2">2</span>
+              clara(s) de huevo a velocidad media-alta hasta que espumen.
+              Añade poco a poco
+              <span class="qty" data-key="azucar-glas-merengue" data-base="100">100</span>
+              g de azúcar glas y, si lo usas,
+              <span class="qty" data-key="crema-tartara" data-base="0.25">0.25</span>
+              cucharadita de crema tártara. Continúa batiendo hasta obtener picos firmes.
+            </li>
+            <li>
+              Forma las setas:
+              coloca el merengue en una manga pastelera con boquilla redonda.
+              Haz pequeños círculos (de 2–3 cm de diámetro) para las bases y conos alargados para los tallos.
+            </li>
+            <li>
+              Hornea:
+              hornea las piezas de merengue a 100 ºC durante unos 90 minutos, hasta que estén secas.
+              Deja enfriar completamente antes de manipularlas.
+            </li>
+            <li>
+              Monta las setas:
+              derrite una pequeña cantidad de chocolate (blanco, con leche o negro) y úsala para unir los tallos con las
+              bases, colocando una gota en el punto de contacto.
+              Mantén las piezas unos segundos hasta que el chocolate comience a endurecer. Espolvorea ligeramente con
+              cacao en polvo si quieres un efecto “terroso”.
+            </li>
+            <img src="./assets/images/setas.jpg" alt="Setas de merengue">
+          </ol>
+
+          <h3>Cobertura de crema de mantequilla especiada</h3>
+          <ol class="recipe-card__steps">
+            <li>
+              Bate la mantequilla:
+              asegúrate de que
+              <span class="qty" data-key="mantequilla-buttercream" data-base="250">250</span>
+              g de mantequilla sin sal estén a temperatura ambiente (suave pero no líquida).
+              Bate a velocidad alta durante 3–4 minutos hasta que esté esponjosa y pálida.
+            </li>
+            <li>
+              Añade el azúcar glas:
+              incorpora poco a poco
+              <span class="qty" data-key="azucar-glas-buttercream" data-base="150">150</span>
+              g de azúcar glas tamizado, batiendo hasta que se integre.
+              Para evitar que se quede atrapado en las varillas, detén la batidora de vez en cuando y raspa los laterales
+              del bol con una espátula.
+            </li>
+            <li>
+              Aromatiza:
+              añade
+              <span class="qty" data-key="canela-buttercream" data-base="0.5">0.5</span>
+              cucharadita de canela en polvo y
+              <span class="qty" data-key="vainilla-buttercream" data-base="1">1</span>
+              cucharadita de extracto de vainilla. Mezcla hasta obtener una textura suave y homogénea.
+            </li>
+          </ol>
+
+          <h3>Montaje y decoración del tronco</h3>
+          
+          Consulta el siguiente video para conocer la forma de montar el bizcocho en forma de tronco:
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uIKCKKrc2Uc?si=4EXpdxqvYOeBYCGV&amp;start=28"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <ol class="recipe-card__steps">
+            <li>
+              Rellena el bizcocho:
+              desenrolla el bizcocho con cuidado y extiende por encima una capa uniforme de la mousse de caramelo salado
+              preparada (usa toda la cantidad de mousse).
+              Enrolla de nuevo con ayuda del paño, ajustando bien para que quede firme.
+            </li>
+            <img src="./assets/images/rollo.jpg" alt="Bizcocho de vainilla y canela relleno de mousse de caramelo salado enrollado">
+            <li>
+              Da forma de tronco:
+              corta uno de los extremos del rollo en diagonal y colócalo a un lado del tronco principal para simular una
+              rama lateral.
+            </li>
+            <li>
+              Cubre con la crema de mantequilla:
+              extiende la crema de mantequilla especiada por toda la superficie del tronco y la rama.
+              Usa un tenedor o espátula pequeña para marcar líneas y vetas, simulando la corteza de un árbol y ocultando
+              uniones o imperfecciones con un poco más de crema.
+            </li>
+            <img src="./assets/images/tronco.jpg" 
+              alt="Bizcocho cubierto con crema de mantequilla, con un extremo encima y otro en el lateral dar forma de tronco">
+            <li>
+              Decora con setas, piñas y frutas:
+              coloca las setas de merengue alrededor y sobre el tronco, usando una pequeña cantidad de chocolate derretido
+              para pegarlas.
+              Distribuye las piñas de galleta junto al tronco.
+              Añade
+              <span class="qty" data-key="frutas-rojas" data-base="50">50</span>
+              g de frutas rojas (grosellas, frambuesas o arándanos) alrededor y sobre el tronco para darle color.
+              Coloca también
+              <span class="qty" data-key="romero" data-base="4">4</span>
+              ramita(s) de romero fresco como si fueran pequeñas ramas de pino.
+            </li>
+            <li>
+              Nieve y brillo:
+              espolvorea
+              <span class="qty" data-key="coco-rallado" data-base="20">20</span>
+              g de coco rallado y azúcar glas por la bandeja y sobre el tronco para simular nieve.
+              Termina con un ligero toque de polvo dorado comestible al gusto para darle un brillo festivo.
+            </li>
+          </ol>
+        </section>
+      </article>
+    </section>
+  </main>
+  <include src="src/components/footer.html"></include>
+</body>
+
+</html>

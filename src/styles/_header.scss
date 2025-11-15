@@ -1,0 +1,60 @@
+@use "variables";
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+nav {
+  position: sticky;
+  background-color: variables.$component-background-color;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    
+
+    li {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+
+      img {
+        width: 35px;
+        vertical-align: middle;
+      }
+
+      a {
+        color: variables.$component-txt-color;
+        text-decoration: none;
+        padding: 14px;
+
+        &:hover {
+          color: variables.$component-txt-hover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  li img {
+    width: 28px;
+  }
+}
+
