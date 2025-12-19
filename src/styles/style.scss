@@ -198,3 +198,47 @@ iframe {
 @media (prefers-reduced-motion: reduce) {
   .sparkle { animation: none; }
 }
+
+//------------------------------ PEC2 ------------------------
+.hero-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.hero-title {
+  display: inline-flex;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.hero-plane {
+  width: 1.2em;
+  height: 1.2em;
+  flex-shrink: 0;
+
+  transform-origin: 50% 50%;
+  transform: translateY(-0.15em);
+
+  animation: planeFloat 2.6s ease-in-out infinite;
+}
+
+.hero-plane .cls-1 {
+  fill: #0072ff;
+}
+
+@keyframes planeFloat {
+  0%, 100% {
+    transform: translateY(-0.15em) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-0.35em) rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-plane {
+    animation: none;
+  }
+}
+
