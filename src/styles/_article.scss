@@ -257,3 +257,19 @@ h2 {
   }
 
 }
+
+
+.article,
+.recipe-card {
+  animation: enter 320ms ease-out both;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article,
+  .recipe-card { animation: none; }
+}

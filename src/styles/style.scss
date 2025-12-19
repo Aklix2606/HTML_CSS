@@ -181,3 +181,20 @@ iframe {
   height: auto;
   border: 0;
 }
+
+.sparkle {
+  display: inline-block;
+  margin-left: 0.35rem;
+  transform-origin: 50% 50%;
+  animation: sparkle 2.2s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.75; }
+  50%      { transform: scale(1.18) rotate(10deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; }
+}
