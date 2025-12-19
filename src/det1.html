@@ -19,7 +19,33 @@
           <p class="recipe-card__subtitle">
             Caldo de pollo y panceta en olla exprés, panceta marinada, huevos ajitsuke y fideos de ramen.
           </p>
-          <img src="./assets/images/ramen.jpg">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                ./assets/images/ramen.jpg?as=avif&width=480 480w,
+                ./assets/images/ramen.jpg?as=avif&width=800 800w,
+                ./assets/images/ramen.jpg?as=avif&width=1200 1200w
+              "
+              sizes="(max-width: 720px) 100vw, 900px"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./assets/images/ramen.jpg?as=webp&width=480 480w,
+                ./assets/images/ramen.jpg?as=webp&width=800 800w,
+                ./assets/images/ramen.jpg?as=webp&width=1200 1200w
+              "
+              sizes="(max-width: 720px) 100vw, 900px"
+            />
+            <img
+              src="./assets/images/ramen.jpg?width=800"
+              alt="Imagen del ramen resultado de la receta"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+
           <ul class="recipe-card__meta">
             <li class="recipe-card__meta-item">
               ⏱ Tiempo total: 3 h (20–30 min elaboración, 30–35 min cocción, 2 h reposo)
@@ -155,8 +181,33 @@
               cucharada(s) de aceite en la olla, marcamos la panceta por todos los lados
               hasta que esté dorada y reservamos. Desechamos el aceite de la olla en un
               recipiente apto una vez acabemos.
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    ./assets/images/panceta.jpg?as=avif&width=480 480w,
+                    ./assets/images/panceta.jpg?as=avif&width=800 800w,
+                    ./assets/images/panceta.jpg?as=avif&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/images/panceta.jpg?as=webp&width=480 480w,
+                    ./assets/images/panceta.jpg?as=webp&width=800 800w,
+                    ./assets/images/panceta.jpg?as=webp&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <img
+                  src="./assets/images/panceta.jpg?width=800"
+                  alt="Pieza entera de panceta atada con hilo"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </li>
-            <img src="./assets/images/panceta.jpg" alt="Pieza entera de panceta atada con hilo">
             <li>
               Pelamos y lavamos las verduras:
               <span class="qty" data-key="cebolleta" data-base="1">1</span>
@@ -167,8 +218,33 @@
               zanahoria(s) y
               <span class="qty" data-key="ajo-caldo" data-base="2">2</span>
               diente(s) de ajo. Añadimos las verduras a la(s) olla(s).
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    ./assets/images/verduras.jpg?as=avif&width=480 480w,
+                    ./assets/images/verduras.jpg?as=avif&width=800 800w,
+                    ./assets/images/verduras.jpg?as=avif&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/images/verduras.jpg?as=webp&width=480 480w,
+                    ./assets/images/verduras.jpg?as=webp&width=800 800w,
+                    ./assets/images/verduras.jpg?as=webp&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <img
+                  src="./assets/images/verduras.jpg?width=800"
+                  alt="cebolla, dientes de ajo y puerro cortados y lavados"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </li>
-            <img src="./assets/images/verduras.jpg" alt="cebolla, dientes de ajo y puerro cortados y lavados">
             <li>
               Limpiamos bien la tierra de
               <span class="qty" data-key="shiitake" data-base="4">4</span>
@@ -184,8 +260,33 @@
               (máxima potencia en vitro/fogón). Usaremos el modo de presión alta de la(s) olla(s)
               exprés, posición 2. Una vez empiece a salir vapor, ponemos un contador de 15 minutos.
               Cuando acabe, apagamos el fuego y dejamos que la presión de la olla baje antes de abrirla.
-            </li>
-            <img src="./assets/images/olla.jpg" alt="Olla exprés con verduras">
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    ./assets/images/olla.jpg?as=avif&width=480 480w,
+                    ./assets/images/olla.jpg?as=avif&width=800 800w,
+                    ./assets/images/olla.jpg?as=avif&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/images/olla.jpg?as=webp&width=480 480w,
+                    ./assets/images/olla.jpg?as=webp&width=800 800w,
+                    ./assets/images/olla.jpg?as=webp&width=1200 1200w
+                  "
+                  sizes="(max-width: 720px) 100vw, 900px"
+                />
+                <img
+                  src="./assets/images/olla.jpg?width=800"
+                  alt="Olla exprés con verduras"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </li>           
             <li>
               Retiramos la panceta y
               <span class="qty" data-key="shiitake" data-base="4">4</span>

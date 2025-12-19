@@ -30,17 +30,44 @@ main {
 #main-content {
   min-height: 100vh;
   padding: 15px;
+
   background-image:
     url("../assets/images/demon.jpg"),
     url("../assets/images/barcelona.jpg"),
     url("../assets/images/rushmore.jpg"),
     url("../assets/images/mexico.jpg");
 
+  background-image:
+    image-set(
+      url("../assets/images/demon.jpg?as=avif&width=800") type("image/avif") 1x,
+      url("../assets/images/demon.jpg?as=avif&width=1600") type("image/avif") 2x,
+      url("../assets/images/demon.jpg?as=webp&width=800") type("image/webp") 1x,
+      url("../assets/images/demon.jpg?as=webp&width=1600") type("image/webp") 2x
+    ),
+    image-set(
+      url("../assets/images/barcelona.jpg?as=avif&width=800") type("image/avif") 1x,
+      url("../assets/images/barcelona.jpg?as=avif&width=1600") type("image/avif") 2x,
+      url("../assets/images/barcelona.jpg?as=webp&width=800") type("image/webp") 1x,
+      url("../assets/images/barcelona.jpg?as=webp&width=1600") type("image/webp") 2x
+    ),
+    image-set(
+      url("../assets/images/rushmore.jpg?as=avif&width=800") type("image/avif") 1x,
+      url("../assets/images/rushmore.jpg?as=avif&width=1600") type("image/avif") 2x,
+      url("../assets/images/rushmore.jpg?as=webp&width=800") type("image/webp") 1x,
+      url("../assets/images/rushmore.jpg?as=webp&width=1600") type("image/webp") 2x
+    ),
+    image-set(
+      url("../assets/images/mexico.jpg?as=avif&width=800") type("image/avif") 1x,
+      url("../assets/images/mexico.jpg?as=avif&width=1600") type("image/avif") 2x,
+      url("../assets/images/mexico.jpg?as=webp&width=800") type("image/webp") 1x,
+      url("../assets/images/mexico.jpg?as=webp&width=1600") type("image/webp") 2x
+    );
+
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: right top, left top, right bottom, left bottom;
   background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  background-attachment: scroll;
 }
+
 
 #cat-content {
   position: relative;
@@ -52,6 +79,13 @@ main {
   min-height: calc(100vh - 64px);
   padding: 2rem 1.5rem;
   background-image: url("../assets/images/cocina.jpg");
+  background-image:
+    image-set(
+      url("../assets/images/cocina.jpg?as=avif&width=1200") type("image/avif") 1x,
+      url("../assets/images/cocina.jpg?as=avif&width=2400") type("image/avif") 2x,
+      url("../assets/images/cocina.jpg?as=webp&width=1200") type("image/webp") 1x,
+      url("../assets/images/cocina.jpg?as=webp&width=2400") type("image/webp") 2x
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,12 +106,26 @@ main {
   top: 0;
   height: 100vh;
   background-image: url("../assets/images/cat_japan.jpg");
+  background-image:
+    image-set(
+      url("../assets/images/cat_japan.jpg?as=avif&width=1200") type("image/avif") 1x,
+      url("../assets/images/cat_japan.jpg?as=avif&width=2400") type("image/avif") 2x,
+      url("../assets/images/cat_japan.jpg?as=webp&width=1200") type("image/webp") 1x,
+      url("../assets/images/cat_japan.jpg?as=webp&width=2400") type("image/webp") 2x
+    );
 }
 
 #finland {
   top: 100vh;
   height: 100vh;
   background-image: url("../assets/images/cat_finland.jpg");
+  background-image:
+    image-set(
+      url("../assets/images/cat_finland.jpg?as=avif&width=1200") type("image/avif") 1x,
+      url("../assets/images/cat_finland.jpg?as=avif&width=2400") type("image/avif") 2x,
+      url("../assets/images/cat_finland.jpg?as=webp&width=1200") type("image/webp") 1x,
+      url("../assets/images/cat_finland.jpg?as=webp&width=2400") type("image/webp") 2x
+    );
 }
 
 footer {
@@ -91,10 +139,26 @@ img {
 @media (max-width: 600px) {
   #main-content {
     background-image:
-      url("../assets/images/demon.jpg"),
-      url("../assets/images/japan.jpg"),
-      url("../assets/images/rushmore.jpg"),
-      url("../assets/images/mexico.jpg");
+      image-set(
+        url("../assets/images/demon.jpg?as=avif&width=600") type("image/avif"),
+        url("../assets/images/demon.jpg?as=webp&width=600") type("image/webp"),
+        url("../assets/images/demon.jpg?width=600") 1x
+      ),
+      image-set(
+        url("../assets/images/japan.jpg?as=avif&width=600") type("image/avif"),
+        url("../assets/images/japan.jpg?as=webp&width=600") type("image/webp"),
+        url("../assets/images/japan.jpg?width=600") 1x
+      ),
+      image-set(
+        url("../assets/images/rushmore.jpg?as=avif&width=400") type("image/avif"),
+        url("../assets/images/rushmore.jpg?as=webp&width=400") type("image/webp"),
+        url("../assets/images/rushmore.jpg?width=400") 1x
+      ),
+      image-set(
+        url("../assets/images/mexico.jpg?as=avif&width=400") type("image/avif"),
+        url("../assets/images/mexico.jpg?as=webp&width=400") type("image/webp"),
+        url("../assets/images/mexico.jpg?width=400") 1x
+      );
 
     background-position:
       center center,
@@ -109,6 +173,7 @@ img {
       30% auto;
   }
 }
+
 
 iframe {
   width: 100%;

@@ -20,7 +20,32 @@
             Bizcocho de vainilla y canela relleno de mousse de caramelo salado, cubierto con crema de mantequilla
             especiada y decorado con piñas de galleta, setas de merengue y frutas rojas.
           </p>
-          <img src="./assets/images/tronco-navidad.jpg" alt="Tronco de Navidad">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                ./assets/images/tronco-navidad.jpg?as=avif&width=480 480w,
+                ./assets/images/tronco-navidad.jpg?as=avif&width=800 800w,
+                ./assets/images/tronco-navidad.jpg?as=avif&width=1200 1200w
+              "
+              sizes="(max-width: 720px) 100vw, 900px"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./assets/images/tronco-navidad.jpg?as=webp&width=480 480w,
+                ./assets/images/tronco-navidad.jpg?as=webp&width=800 800w,
+                ./assets/images/tronco-navidad.jpg?as=webp&width=1200 1200w
+              "
+              sizes="(max-width: 720px) 100vw, 900px"
+            />
+            <img
+              src="./assets/images/tronco-navidad.jpg?width=800"
+              alt="Tronco de Navidad"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
           <ul class="recipe-card__meta">
             <li class="recipe-card__meta-item">
               ⏱ Tiempo total: 4 h aprox. (repartidas en varias elaboraciones y reposos)
@@ -323,7 +348,32 @@
               piñas.
               Si la masa está muy blanda, refrigera las piezas formadas durante unos 5 minutos antes de continuar.
             </li>
-            <img src="./assets/images/piñas.jpg" alt="Masa de cacao en forma de cilindro con punta redondeada">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./assets/images/pinas.jpg?as=avif&width=480 480w,
+                  ./assets/images/pinas.jpg?as=avif&width=800 800w,
+                  ./assets/images/pinas.jpg?as=avif&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/pinas.jpg?as=webp&width=480 480w,
+                  ./assets/images/pinas.jpg?as=webp&width=800 800w,
+                  ./assets/images/pinas.jpg?as=webp&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <img
+                src="./assets/images/pinas.jpg?width=800"
+                alt="Masa de cacao en forma de cilindro con punta redondeada"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <li>
               Inserta los Chocapic:
               coloca los cereales Chocapic o similares en filas superpuestas sobre cada pieza de masa, simulando los
@@ -333,7 +383,32 @@
               Refrigera:
               coloca las piñas en la nevera durante al menos 1 hora para que endurezcan y se integren bien los sabores.
             </li>
-            <img src="./assets/images/piñas-final.jpg" alt="Piñas de chocolate">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./assets/images/pinas-final.jpg?as=avif&width=480 480w,
+                  ./assets/images/pinas-final.jpg?as=avif&width=800 800w,
+                  ./assets/images/pinas-final.jpg?as=avif&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/pinas-final.jpg?as=webp&width=480 480w,
+                  ./assets/images/pinas-final.jpg?as=webp&width=800 800w,
+                  ./assets/images/pinas-final.jpg?as=webp&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <img
+                src="./assets/images/pinas-final.jpg?width=800"
+                alt="Piñas de chocolate"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </ol>
 
           <h3>Setas de merengue</h3>
@@ -366,7 +441,33 @@
               Mantén las piezas unos segundos hasta que el chocolate comience a endurecer. Espolvorea ligeramente con
               cacao en polvo si quieres un efecto “terroso”.
             </li>
-            <img src="./assets/images/setas.jpg" alt="Setas de merengue">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./assets/images/setas.jpg?as=avif&width=480 480w,
+                  ./assets/images/setas.jpg?as=avif&width=800 800w,
+                  ./assets/images/setas.jpg?as=avif&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/setas.jpg?as=webp&width=480 480w,
+                  ./assets/images/setas.jpg?as=webp&width=800 800w,
+                  ./assets/images/setas.jpg?as=webp&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <img
+                src="./assets/images/setas.jpg?width=800"
+                alt="Setas de merengue"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
           </ol>
 
           <h3>Cobertura de crema de mantequilla especiada</h3>
@@ -410,7 +511,33 @@
               preparada (usa toda la cantidad de mousse).
               Enrolla de nuevo con ayuda del paño, ajustando bien para que quede firme.
             </li>
-            <img src="./assets/images/rollo.jpg" alt="Bizcocho de vainilla y canela relleno de mousse de caramelo salado enrollado">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./assets/images/rollo.jpg?as=avif&width=480 480w,
+                  ./assets/images/rollo.jpg?as=avif&width=800 800w,
+                  ./assets/images/rollo.jpg?as=avif&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/rollo.jpg?as=webp&width=480 480w,
+                  ./assets/images/rollo.jpg?as=webp&width=800 800w,
+                  ./assets/images/rollo.jpg?as=webp&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <img
+                src="./assets/images/rollo.jpg?width=800"
+                alt="Bizcocho de vainilla y canela relleno de mousse de caramelo salado enrollado"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
             <li>
               Da forma de tronco:
               corta uno de los extremos del rollo en diagonal y colócalo a un lado del tronco principal para simular una
@@ -422,8 +549,33 @@
               Usa un tenedor o espátula pequeña para marcar líneas y vetas, simulando la corteza de un árbol y ocultando
               uniones o imperfecciones con un poco más de crema.
             </li>
-            <img src="./assets/images/tronco.jpg" 
-              alt="Bizcocho cubierto con crema de mantequilla, con un extremo encima y otro en el lateral dar forma de tronco">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./assets/images/tronco.jpg?as=avif&width=480 480w,
+                  ./assets/images/tronco.jpg?as=avif&width=800 800w,
+                  ./assets/images/tronco.jpg?as=avif&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/tronco.jpg?as=webp&width=480 480w,
+                  ./assets/images/tronco.jpg?as=webp&width=800 800w,
+                  ./assets/images/tronco.jpg?as=webp&width=1200 1200w
+                "
+                sizes="(max-width: 720px) 100vw, 900px"
+              />
+              <img
+                src="./assets/images/tronco.jpg?width=800"
+                alt="Bizcocho cubierto con crema de mantequilla, con un extremo encima y otro en el lateral dar forma de tronco"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
             <li>
               Decora con setas, piñas y frutas:
               coloca las setas de merengue alrededor y sobre el tronco, usando una pequeña cantidad de chocolate derretido
